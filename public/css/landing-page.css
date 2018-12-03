@@ -1,0 +1,26 @@
+body, html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background-color: #ffd231;
+	color: #C4002D;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	/* font-weight: 700; */
+}
+
+p {
+	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+	color: #2D733C;
+}
+
+section {
+	padding: 1% 1%;
+}
