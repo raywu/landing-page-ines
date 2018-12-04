@@ -17,20 +17,38 @@
   <link href="css/landing-page.css" rel="stylesheet">
 
 </head>
-  <body id="home">
+  <body>
     <section class="text-center col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-      <h1>Pottery Lisbon</h1>
-      <h2>with Inês Diana Salgado</h2>
+      <div id="english-header">
+        <h1>Pottery Lisbon</h1>
+        <h2>with Inês Diana Salgado</h2>
+      </div>
+      <div id="portuguese-header">
+        <h1>Olaria Lisboa</h1>
+        <h2>with Inês Diana Salgado</h2>
+      </div>
     </section>
     <section class="text-center col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
       <div>
+        <button type="button" class="btn btn-outline-primary btn-sm" id="en">English</button>
+        <button type="button" class="btn btn-outline-primary btn-sm" id="po">Portugues</button>
+      </div>
+    </section>
+    <section class="text-center col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+      <div id="english-text">
         <p>Inês has 30+ years experience as a ceramist and teacher. She offers wheel throwing and sculture classes for beginners to intermediate students at Lisbon's community center, Anjos70.</p>
         <p>Contact Inês below to get in touch.</p>
+      </div>
+      <div id="portuguese-text">
+        <p>Portuguese blah blah</p>
+        <p>Call me maybe</p>
+      </div>
+      <div>
         <ul class="text-left">
-          <li><a href="https://goo.gl/maps/Hky5kc9BPDn">Rua Regueirão dos Anjos nº68/70, Lisbon, Portugal 1150-30</a></li>
+          <li><a href="https://goo.gl/maps/Hky5kc9BPDn" target="_blank">Rua Regueirão dos Anjos nº68/70, Lisbon, Portugal 1150-30</a></li>
           <li><a href="tel:+351963750438">+351963750438</a></li>
           <li><a href="whatsapp://send?text=Pottery Lisbon!&phone=+351963750438">WhatsApp</a></li>
-          <li><a href="https://www.facebook.com/inesdianasalgado.ceramista.e.formadora/">Facebook Page</a></li>
+          <li><a href="https://www.facebook.com/inesdianasalgado.ceramista.e.formadora/" target="_blank">Facebook Page</a></li>
           <li><a href="mailto:ines.salgado.ceramics@gmail.com?Subject=Pottery%20Lisbon">ines.salgado.ceramics@gmail.com</a></li>
         </ul>
       </div>
@@ -41,5 +59,22 @@
     <!-- JavaScript -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script>
+        $(document).ready(function() {
+          $("#en").click(function() {
+            $("#portuguese-header").hide();
+            $("#english-header").show();
+            $("#portuguese-text").hide();
+            $("#english-text").show();
+          });
+          $("#po").click(function() {
+            $("#english-text").hide();
+            $("#portuguese-text").show();
+            $("#english-header").hide();
+            $("#portuguese-header").show();
+          });
+          $("#en").click();
+        });
+   </script>
   </body>
 </html>
